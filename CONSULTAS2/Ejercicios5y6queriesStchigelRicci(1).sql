@@ -1,0 +1,31 @@
+/*Ejercico 5*/
+insert into MEDICO values (1, "Juan", "Perez", 1281287, "traumatologo"), (3, "Arena", "Lopez", 254543, "pediatra"), (5, "Abril", "Cruz", 45345533, "meteorologia"), (6, "Juana", "Zurduy", 54643643, "meteorologia");
+insert into PACIENTE values (1, "Juan", "Ronaldo", "JASKJR 12", "Tero vi.", "Santiago", 1746, 235546, "2006-1-1"), (3, "Ronaldo", "Juan", "dgr 44", "caba", "Ba", 2043, 546776654, "2007-1-1"), (5, "nuaJ", "Juan", "dgr 46", "caba", "Ba", 2043, 38575, "2007-1-1"), (35, "Carlos", "Juan", "dgr 45", "caba", "Ba", 2043, 837584, "2007-1-1");
+insert into INGRESOS values (1, 2, 3, "2006-5-5", 35, 3), (2, 5, 4, "2019-5-5", 1, 3), (3, 7, 9, "2009-5-5", 1, 6), (4, 7, 9, "2009-5-5", 3, 6);
+select NOMBRE from MEDICO where ESPECIALIDAD = "traumatologo" order by APELLIDO;
+delete from INGRESOS where FECHA < "2018-1-1";
+select N_CAMA from INGRESOS where PACIENTE_CODIGO = 1;
+update MEDICO set ESPECIALIDAD = "Pediatra" where CODIGO = 5;
+select NOMBRE, CODIGO from MEDICO where NOMBRE like "A%";
+/*Ejercicio 6*/
+Insert into provedor value (7, "Juan", "Perez", "California 3842", "Catamarca", 1282342);
+Insert into provedor value (188, "Jian", "Perezx", "Californiae 3842", "Catamarcae", 2282342);
+Insert into provedor value (189, "Jean", "Perezy", "Californiai 3842", "Catamarcai", 3282342);
+Insert into provedor value (186, "Joan", "Perezz", "California0 3842", "Catamarcao", 4282342);
+Insert into Productos value (234, "lindo", 567, 123);
+Insert into Productos value (235, "lindoa", 568, 124);
+Insert into Productos value (236, "lindoe", 569, 125);
+Insert into Productos value (237, "lindoi", 570, 126);
+Insert into Productos value (238, null, 570, 126);
+Insert into cliente value (456, "Javier", "Martinez", "politec", 112345678);
+Insert into cliente value (457, "Javiera", "Martineza", "politeca", 212345678);
+Insert into cliente value (458, "Javiere", "Martineze", "politece", 312345678);
+Insert into cliente value (459, "Javieri", "Martinezi", "politeci", 412345678);
+Insert into cliente value (460, "Javieri", "partinezi", "politecartery", 45345344);
+insert into provedor_has_Productos values (7, 235), (7,236), (188, 237), (189, 237);
+insert into Productos_has_cliente values (234, 456, 1, 2006-1-1), (235, 457, 2, 2007-6-4), (237, 457, 3, 2005-6-4), (236, 456, 3, 2001-6-4);
+select codigo, precio from Productos where precio > 1000 order by precio desc;
+select * from cliente where apellido like "p%";
+delete from Productos where descripcion = null;
+select Productos_codigo from provedor_has_Productos where provedor_codigo = 7;
+select codigo, descripcion, precio, precio-precio*0.1 from Productos;
