@@ -1,5 +1,5 @@
 Nicolas Stchigel y Ricci Benjamin \
-Indice: \
+Indice: 
 >  1- [Consultas I](/CONSULTAS1) \
 >  2- [Consultas II](/CONSULTAS2) \
 >  3- [Creación de Tablas](/CREACIONDETABLAS) \
